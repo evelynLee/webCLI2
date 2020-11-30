@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
+    font-size: 18px;
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: #FFF;
+    position: fixed;
+    z-index: 999;
+    opacity: 0.8;
+}
+
+.header h1 {
+    float: left;
+    margin: 20px;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.header h1:hover {
+    opacity: 1;
+}
+
+.header h3 {
+    position: absolute;
+    right:20px;
+    top:30px;
+    display: none;
+}
+
+.header ul {
+    float: right;
+    margin-right: 50px;
+}
+
+.header li {
+    list-style: none;
+    float: left;
+    margin-top: 30px;
+}
+.header li.close {
+    display: none;
+}
+
+.header li a {
+    margin-right: 2px;
+    text-decoration: none;
+    color: #eee;
+    background-color: #999;
+    font-size: 0.8em;
+    padding: 4px 10px 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    border-top: 3px #999 solid;
+
+}
+
+.header li a:hover {
+    color: #555;
+    background-color: #bbb;
+    border-top: 3px #555 solid;
+}
+
+.banner {
+    padding-top: 80px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.office {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.office .ofbox {
+    width: calc(21%);
+    margin: 0 10px;
+    transition: all 0.4s;
+}
+
+.office .ofbox:hover {
+    box-shadow: 6px 6px 3px rgba(0, 0, 0, 0.1);
+    transform: scale(1.01);
+}
+
+.office .ofbox img {
+    max-width: 100%;
+}
+
+.wordArea {
+    padding: 30px;
+}
+
+.wordArea span {
+    font-size: 0.9em;
+}
+
+.wordArea p {
+    margin: 20px auto;
+}
+
+.ofbox a {
+    text-decoration: none;
+    color: red;
+    font-size: 0.8em;
+}
+
+.ad {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.adbox {
+    width: 100%;
+}
+
+.ad img {
+    width: 100%;
+    height: auto;
+}
+
+.nav {
+    background-color: #555;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav .navbox {
+    margin: 80px 0;
+}
+
+.nav .navbox p {
+    color: white;
+    font-weight: bold;
+}
+
+.nav .navbox ul {}
+
+.nav .navbox li {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.nav .navbox li a {
+    text-decoration: none;
+    color: #bbb;
+    font-size: 0.6em;
+    transition: all 0.3s;
+}
+
+.nav .navbox li a:hover {
+    border-bottom: 1px solid #777;
+    padding-bottom: 3px;
+
+}
+
+.footer {
+    background-color: #333;
+    /* height: 150px; */
+    color: #888;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer h2 {
+    width: 80%;
+    color: #999;
+    padding: 30px 50px;
+    border-bottom: 1px solid #777;
+    transition: all 0.5s;
+    margin: 0 auto;
+}
+
+.footer h2:hover {
+    color: #eee;
+}
+
+.footer p {
+    padding: 15px 10px 0;
+    font-size: 0.7em;
+}
+
+.footer p:last-child {
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width:1200px) and (min-width:769px) {
+    .office {
+        flex-wrap: wrap;
+    }
+    .office .ofbox {
+        width: calc(45%);
+    }
+    .office .ofbox img {
+        width: 100%;
+    }
+    .ad {
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header h3 {
+        display: block;
+        position: absolute;
+        right:20px;
+        top:30px;
+        cursor: pointer;
+    }
+
+    .header {
+        opacity: 0.9;
+    }
+    
+    .header ul {
+        margin: 70px 20px 0 0;
+        background-color: #555;
+        padding: 10px;
+        display: none;
+    }
+    
+    .header li {
+        list-style: none;
+        float: none;
+        background-color: #999;
+        margin:10px;
+        padding:5px 10px;
+    }
+
+    .header li#close {
+        display: block;
+        position: absolute;
+        top:45px;
+        right: -5px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+    }
+
+    .header li.second {
+        margin-top: 10px;
+    }
+    
+    .header li a {
+        text-decoration: none;
+        color: #eee;
+        padding: 0;
+        font-size: 0.8em;
+        border-radius:0px;
+        transition: none;
+        margin: 0;
+    
+    }
+    
+    .header li a:hover {
+        color: #fff;
+        background-color: #999;
+        border-bottom: 1px #ccc solid;
+        border-top: none;
+    }
+
+    /* .header h3#dropdown:hover  .header ul {
+        display: block;
+    } */
+
+    .office {
+        flex-wrap: wrap;
+    }
+
+    .office .ofbox {
+        width: 90%;
+        margin: 2rem;
+    }
+
+    .office .ofbox img {
+        width: 100%;
+    }
+    .ad {
+        flex-wrap: wrap;
+    }
+
+}
